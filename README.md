@@ -1,7 +1,6 @@
 <h1>LAPORAN MODUL 1 SHELL SCRIPTING</h1>
 <h3>Disusun Oleh</h3>
-<h5>Bella Septina Ika Hartanti  (05111740000117)</h5>
-<h5>Miranda Manurung            (05111740000144)</h5>
+<h5>Bella Septina Ika Hartanti  (05111740000117)<br>Miranda Manurung            (05111740000144)</h5>
 
 
 <ol>

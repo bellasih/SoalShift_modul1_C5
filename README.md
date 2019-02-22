@@ -95,4 +95,11 @@ c. Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[use
 
 awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/soalshift1/hasil5.log
 </pre>
+<h5>Penjelasan</h5>
+<ul><li>'/cron/ || /CRON/ : untuk mencari atau memindai baris(row) yang mengandung CRON (baik uppercase atau lowercase)</li>
+        <li>!/sudo/ : menyeleksi baris yang akan diambil dimana baris tersebut tidak mengandung kata sudo</li>
+        <li>/var/log/syslog :file syslog yang akan diambil barisnya untuk diseleski</li>
+        <li>NF < 13 : mengambil jumlah kolom yang kurang dari 13 (menjadi input) </li>
+        <li>/home/bella/soalshift1/hasil5.log : tempat file output akan diletakkan</li>
+</ul>
 </ol>

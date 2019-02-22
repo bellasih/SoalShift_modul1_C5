@@ -106,6 +106,4 @@ awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/mo
 <pre>
 2-30/6 * * * * bin/bash /home/bella/modul1/soal5.sh
 </pre>
-<h5>Penjelasan:</h5>
-<ul><li>2-30</li></ul>
 </ol>

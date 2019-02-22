@@ -34,6 +34,19 @@ d. Password yang dihasilkan tidak boleh sama.
 <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan enkripsi dimana pergeseran hanya dimungkinkan sekali. </li>
                 <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog dari sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
 <li>Simpan hasil enkripsi ke dalam sebuah file sesuai format waktu dan tanggal</li></ul>
+        Berikut adalah contoh source code enkripsi <br>
+        <code>
+#!/bin/bash
+hr=`date +"%H"`
+filename=`date +"%H:%M %d-%m-%y"`
+
+lc="abcdefghijklmnopqrstuvwxyz"
+uc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lc+=$lc
+uc+=$uc
+
+cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" > "$filename"
+</code>
     <li>2. </li>
 </ol></p>
 </li>

@@ -32,6 +32,13 @@ done
 a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.<br>
 b. Tentukan tiga product line yang memberikan penjualan(quantity)terbanyak pada soal poin a.<br>
 c. Tentukan tiga product yang memberikan penjualan(quantity) terbanyak berdasarkan tiga product line yang didapatkan pada soal poin b.
+        <h5>Jawaban</h5>
+        <p>
+        <pre>awk -F, '$7=="2012" && maximum<$10 {maximum=$1} END {print maximum}' WA_Sales_Products_2012-14.csv</pre>
+<h5>Penjelasan</h5>
+                <code>'$7=="2012" && maximum<$10 {maximum=$1}</code>
+Dapatkan nilai terbesar pada kolom Quantity yang pada kolom Year-nya adalah 2012. Hasil dari nilai terbesar disimpan di "maximum" dan actionnya ialah mengambil negara yang bersesuaian dengan selection_criteria tadi.</br>
+        </p>
         </p></li>
         <li><p align="justify">Buatlah sebuah script bash yang dapat menghasilkan password secara acak sebanyak 12 karakter yang terdapat huruf besar, huruf kecil, dan angka. Password acak tersebut disimpan pada file berekstensi .txt dengan ketentuan pemberian nama sebagai berikut: <br>
 a. Jika tidak ditemukan file password1.txt maka password acak tersebut disimpan pada file bernama password1.txt<br>

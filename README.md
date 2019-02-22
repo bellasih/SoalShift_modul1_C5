@@ -52,7 +52,7 @@ cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" >
         <li>Simpan jam yang di dapat dari waktu ke dalam sebuah variabel. Variabel ini akan digunakan sebagai titik pergeseran huruf untuk melakukan dekripsi</li>
         <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan dekripsi dimana pergeseran hanya dimungkinkan sekali.</li>
        <li>Terjemahkan hasil dari <code>cat</code> pada file yang dipilih sesuai dengan format konversi dekripsi yaitu menggeser huruf huruf ke-n dari abjad agar di dapat huruf yang sesuai dengan urutan yang sebenarnya. </li>
-                <p>Berikut adalah contoh source code dekripsi: </p>
+ <p>Berikut adalah contoh source code dekripsi: </p>
 <pre>
 #!/bin/bash
 echo "Masukkan nama file yang akan didecrypt: "

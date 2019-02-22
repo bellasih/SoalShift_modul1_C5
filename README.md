@@ -1,4 +1,8 @@
 <h1>LAPORAN MODUL 1 SHELL SCRIPTING</h1>
+<h3>Disusun Oleh</h3>
+<h5>Bella Septina Ika Hartanti  (05111740000117)</h5>
+<h5>Miranda Manurung            (05111740000144)</h5>
+
 
 <ol>
         <li><p align="justify">Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienkripsi oleh seseorang menggunakan bash script, file yang dimaksud adalah nature.zip. Karena terlalu mudah kalian memberikan syarat akan membuka seluruh file tersebut jika pukul 14:14 pada tanggal 14 Februari atau hari tersebut adalah hari jumat pada bulan Februari.<br>

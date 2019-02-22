@@ -156,6 +156,8 @@ cat "$date_time" | tr "${lc:$hr:26}${uc:$hr:26}" "${lc:0:26}${uc:0:26}" | cat > 
 </pre>
 </li>
 </ol></p>
+<h6>Crontab</h6>
+<pre>0 * * * * /bin/bash /home/bella/modul1/soal4.sh</pre>
 </li>
 
 <li><p align="justify">Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kriteria berikut:<br>

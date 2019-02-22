@@ -89,4 +89,10 @@ sehingga huruf kapital atau tidak, tidak menjadi masalah.<br>
 b. Jumlah field (number of field) pada baris tersebut berjumlah kurang dari 13.<br>
 c. Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[user]/modul1.
 </p><h5>Jawaban</h5></li>
+<h6>Bash Script</h6>
+<pre>
+#!/bin/bash
+
+awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/soalshift1/hasil5.log
+</pre>
 </ol>

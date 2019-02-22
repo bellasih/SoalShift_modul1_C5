@@ -31,4 +31,4 @@ d. Password yang dihasilkan tidak boleh sama.
     <li>2. </li>
 </ol></p>
 </li>
-<li></li></ol>
+</ol>

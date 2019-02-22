@@ -17,10 +17,6 @@ create_format_password() {
 
 i=1
 
-#create_format_password | sort -R | tr -d '\n' > random_pass.txt
-#random=$(awk '{print $1}' random_pass.txt)
-#echo "$random"
-
 while true;
 do
 if ! [[ -f password$i.txt ]];

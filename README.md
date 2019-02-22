@@ -57,7 +57,51 @@ a. Jika tidak ditemukan file password1.txt maka password acak tersebut disimpan 
 b. Jika file password1.txt sudah ada maka password acak baru akan disimpan pada file bernama password2.txt dan begitu seterusnya.<br>
 c. Urutan nama file tidak boleh ada yang terlewatkan meski filenya dihapus.<br>
 d. Password yang dihasilkan tidak boleh sama.
-</p></li>
+</p>
+        <pre>!/bin/bash
+
+digit='0123456789'
+lower='abcdefghijklmnopqrstuvwxyz'
+upper='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+create_pass() { echo ${1:RANDOM%${#1}:1}; }
+create_format_password() {
+  create_pass $digit
+  create_pass $lower
+  create_pass $upper
+  for i in $( seq 1 $(( 9 )) )
+     do
+        create_pass $digit$lower$upper
+     done
+ }
+
+i=1
+
+#create_format_password | sort -R | tr -d '\n' > random_pass.txt
+#random=$(awk '{print $1}' random_pass.txt)
+#echo "$random"
+
+while true;
+do
+if ! [[ -f password$i.txt ]];
+   then
+   while true; do
+        create_format_password | sort -R | tr -d '\n' > random_pass.txt
+        random=$(awk '{print $1}' random_pass.txt)
+        if [[ "$(awk -v random="$random" 'pw==$0{print $0}' password*.txt)" -eq "" ]]; then
+                echo "$random" > password$i.txt
+                break
+        fi
+        done
+        break
+   fi
+   i=$((i+1))
+done
+
+</pre>
+<h5>Penjelasan</h5>
+<p>Source diatas digunakan untuk menghasilkan random password yang bersifat unik, jika hasil random passwordnya sama maka akan mengulang lagi hingga mendapatkan password yang berbeda dan menyimpannya di file ekstensi .txt</p>
+</li>
 <li>
 <p align="justify">Lakukan backup file syslog setiap jam dengan format nama file “jam:menit tanggal-bulan-tahun”. Isi dari file backup terenkripsi dengan konversi huruf (string manipulation) yang disesuaikan dengan jam dilakukannya backup misalkan sebagai berikut:<br>
 <ol><li>Huruf b adalah alfabet kedua, sedangkan saat ini waktu menunjukkan pukul 12, sehingga huruf b diganti dengan huruf alfabet yang      

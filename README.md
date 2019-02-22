@@ -5,8 +5,8 @@
                 <b>Hint: Base64, Hexdump</b>
         </p></li>
         <li><p>Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv. Laporan yang diminta berupa:<br>
-a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.
-b. Tentukan tiga product line yang memberikan penjualan(quantity)terbanyak pada soal poin a.
+a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.<br>
+b. Tentukan tiga product line yang memberikan penjualan(quantity)terbanyak pada soal poin a.<br>
 c. Tentukan tiga product yang memberikan penjualan(quantity) terbanyak berdasarkan tiga product line yang didapatkan pada soal poin b.
         </p></li>
         <li></li>

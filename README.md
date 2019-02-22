@@ -102,4 +102,8 @@ awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/so
         <li>NF < 13 : mengambil jumlah kolom yang kurang dari 13 (menjadi input) </li>
         <li>/home/bella/soalshift1/hasil5.log : tempat file output akan diletakkan</li>
 </ul>
+<h6>Crontab</h6>
+<pre>
+2-30/6 * * * * bin/bash /home/bella/soalshift1/soal5.sh
+</pre>
 </ol>

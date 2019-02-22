@@ -1,10 +1,10 @@
 #!/bin/bash
-hour=`date +"%H"`
-name=`date +"%H:%M %d-%m-%y"`
+hr=`date +"%H"`
+filename=`date +"%H:%M %d-%m-%y"`
 
-kcl="abcdefghijklmnopqrstuvwxyz"
-bsr="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-kcl+=$kcl
-bsr+=$bsr
+lc="abcdefghijklmnopqrstuvwxyz"
+uc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lc+=$lc
+uc+=$buc
 
-cat /var/log/syslog | tr "${kcl:0:26}${bsr:0:26}" "${kcl:$hour:26}${bsr:$hour:26}" > "$name"
+cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hr:26}${uc:$hr:26}" > "$filename"

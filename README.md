@@ -2,7 +2,19 @@
 
 <ol>
         <li><p align="justify">Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienkripsi oleh seseorang menggunakan bash script, file yang dimaksud adalah nature.zip. Karena terlalu mudah kalian memberikan syarat akan membuka seluruh file tersebut jika pukul 14:14 pada tanggal 14 Februari atau hari tersebut adalah hari jumat pada bulan Februari.<br>
-                <b>Hint: Base64, Hexdump</b>
+                <b>Hint: Base64, Hexdump</b></br>
+        <h5>Jawaban</h5></br>
+* Download file nature.zip, ekstrak di home
+* Create <file>.sh pada folder nature dengan sintaks berikut enter  
+```
+#!/bin/bash
+i=1
+for pict in /home/nanda/nature/*.jpg
+do
+  base64 -d "$pict" | xxd -r > "/home/nanda/nature/pict"$i".jpg"
+  let i++
+done
+```
         </p></li>
         <li><p align="justify">Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv. Laporan yang diminta berupa:<br>
 a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.<br>

@@ -1,7 +1,9 @@
 <h1>LAPORAN MODUL 1 SHELL SCRIPTING</h1>
 
 <ol>
-        <li></li>
+        <li><p>Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienkripsi oleh seseorang menggunakan bash script, file yang dimaksud adalah nature.zip. Karena terlalu mudah kalian memberikan syarat akan membuka seluruh file tersebut jika pukul 14:14 pada tanggal 14 Februari atau hari tersebut adalah hari jumat pada bulan Februari.
+                <b>Hint: Base64, Hexdump</b>
+</p></li>
         <li></li>
         <li></li>
 <li>

@@ -10,4 +10,6 @@ e. dan buatkan juga bash script untuk dekripsinya.</p>
 
 <h5>Jawaban</h5>
 <p>Untuk menyelesaikan soal nomor 4, berikut adalah langkah-langkahnya :<br>
-1. </p>
+<ol><li>1.</li>
+    <li>2. </li>
+</ol></p>

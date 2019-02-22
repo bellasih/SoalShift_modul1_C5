@@ -93,7 +93,7 @@ c. Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[use
 <pre>
 #!/bin/bash
 
-awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/soalshift1/hasil5.log
+awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/modul1/hasil5.log
 </pre>
 <h5>Penjelasan</h5>
 <ul><li>'/cron/ || /CRON/ : untuk mencari atau memindai baris(row) yang mengandung CRON (baik uppercase atau lowercase)</li>
@@ -104,6 +104,8 @@ awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/so
 </ul>
 <h6>Crontab</h6>
 <pre>
-2-30/6 * * * * bin/bash /home/bella/soalshift1/soal5.sh
+2-30/6 * * * * bin/bash /home/bella/modul1/soal5.sh
 </pre>
+<h5>Penjelasan:</h5>
+<ul><li>2-30</li></ul>
 </ol>

@@ -54,18 +54,19 @@ cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" >
        <li>Terjemahkan hasil dari <code>cat</code> pada file yang dipilih sesuai dengan format konversi dekripsi yaitu menggeser huruf huruf ke-n dari abjad agar di dapat huruf yang sesuai dengan urutan yang sebenarnya. </li>
         <br>Berikut adalah contoh source code enkripsi <br>
         <pre>
-        !/bin/bash
+#!/bin/bash
 echo "Masukkan nama file yang akan didecrypt: "
 read date_time
 hr=${date_time:0:2}
 
 lc="abcdefghijklmnopqrstuvwxyz"
 uc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-lc+=$kcl
-uc+=$bsr
+lc+=$lc
+uc+=$uc
 
 cat "$date_time" | tr "${lc:$hr:26}${uc:$hr:26}" "${lc:0:26}${uc:0:26}" | cat > "/home/bella/modul1/hasil_decrypt $data_time
-   </pre>
+
+</pre>
 </li>
 </ol></p>
 </li>

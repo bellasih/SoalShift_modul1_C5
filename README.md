@@ -32,9 +32,9 @@ d. Password yang dihasilkan tidak boleh sama.
         <ul><li>Simpan jam yang didapat dari tanggal ke dalam sebuah variabel untuk keperluan enkripsi. Variabel ini nantinya sebagai           titik pergeseran huruf. Contoh sintaksnya: <code>`hr=date +"%H"`</code></li>
 <li>Simpan waktu dan tanggal dalam sebuah variabel yang nantinya akan dipakai untuk penamaan file output setelah enkripsi.Contoh sintaksnya: <code>filename=`date +"%H:%M %d-%m%y"`</code></li>
 <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan enkripsi dimana pergeseran hanya dimungkinkan sekali. </li>
-                <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog dari sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
+                <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
 <li>Simpan hasil enkripsi ke dalam sebuah file sesuai format waktu dan tanggal</li></ul>
-        Berikut adalah contoh source code enkripsi <br>
+        <br>Berikut adalah contoh source code enkripsi <br>
         <pre>
 #!/bin/bash
 hr=`date +"%H"`
@@ -47,7 +47,26 @@ uc+=$uc
 
 cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" > "$filename"
 </pre>
-    <li>2. </li>
+    <li>Buatlah shell script yang dapat melakukan enkripsi pada file yang merupakan hasil dari enkripsi.<br>Berikut adalah langkah-langkah dalam membuat berekstensi .sh untuk melakukan dekripsi atau penerjemahan ulang:<br>
+        <ul><li>Tentukan file mana yang akan dilakukan dekripsi. Masukkan nama file sesuai format yang telah ditentukan, yaitu: waktu tanggal.</li>
+        <li>Simpan jam yang di dapat dari waktu ke dalam sebuah variabel. Variabel ini akan digunakan sebagai titik pergeseran huruf untuk melakukan dekripsi</li>
+        <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan dekripsi dimana pergeseran hanya dimungkinkan sekali.</li>
+       <li>Terjemahkan hasil dari <code>cat</code> pada file yang dipilih sesuai dengan format konversi dekripsi yaitu menggeser huruf huruf ke-n dari abjad agar di dapat huruf yang sesuai dengan urutan yang sebenarnya. </li>
+        <br>Berikut adalah contoh source code enkripsi <br>
+        <pre>
+        !/bin/bash
+echo "Masukkan nama file yang akan didecrypt: "
+read date_time
+hr=${date_time:0:2}
+
+lc="abcdefghijklmnopqrstuvwxyz"
+uc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lc+=$kcl
+uc+=$bsr
+
+cat "$date_time" | tr "${lc:$hr:26}${uc:$hr:26}" "${lc:0:26}${uc:0:26}" | cat > "/home/bella/modul1/hasil_decrypt $data_time
+   </pre>
+</li>
 </ol></p>
 </li>
 <li><p align="justify">Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kriteria berikut:<br>

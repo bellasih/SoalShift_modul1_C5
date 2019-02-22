@@ -20,12 +20,11 @@ do
   let i++
 done
         </pre>
-        Penjelasan</br>
-  1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop
-  2. <code>base64 -d</code> Mendecrypt semua "pict" yang sudah ditentukan di for loop tadi.
-  3. Hasil decrypt nya masuk ke perintah <code>xxd -r</code> untuk di reverse hexdump
-  4. <code>"/home/nanda/nature/photo"$i".jpg"</code> Hasil jadinya disimpan di folder nature dengan mengganti nama menjadi "pict<i>n</i>.jpg" n=1,2,3,..  
-
+        <h5>Penjelasan<h5></br>
+               <p>1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop<br>
+  2. <code>base64 -d</code> Mendecrypt semua "pict" yang sudah ditentukan di for loop tadi.<br>
+  3. Hasil decrypt nya masuk ke perintah <code>xxd -r</code> untuk di reverse hexdump<br>
+  4. <code>"/home/nanda/nature/photo"$i".jpg"</code> Hasil jadinya disimpan di folder nature dengan mengganti nama menjadi "pict<i>n</i>.jpg" n=1,2,3,..  </p>
         </p></li>
         <li><p align="justify">Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv. Laporan yang diminta berupa:<br>
 a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.<br>

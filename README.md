@@ -9,7 +9,8 @@
    <li>dan buatkan juga bash script untuk dekripsinya.</li>
 </ol></p>
 <h5>Jawaban</h5>
-<p>Untuk menyelesaikan soal nomor 4, berikut adalah langkah-langkahnya :<br>
-<ol><li>1.</li>
+<p></p>
+<p>Untuk menyelesaikan soal nomor 4, berikut adalah langkah-langkahnya :
+<ol><li><h8>Buatlah shell scripting untuk melakukan enkripsi pada file syslog yang terletak pada /var/log/syslog/</h8></li>
     <li>2. </li>
 </ol></p>

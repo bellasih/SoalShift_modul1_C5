@@ -31,4 +31,10 @@ d. Password yang dihasilkan tidak boleh sama.
     <li>2. </li>
 </ol></p>
 </li>
+<li><p align="justify">Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kriteria berikut:<br>
+a. Tidak mengandung string “sudo”, tetapi mengandung string “cron”, serta buatlah pencarian stringnya tidak bersifat case sensitive,
+sehingga huruf kapital atau tidak, tidak menjadi masalah.<br>
+b. Jumlah field (number of field) pada baris tersebut berjumlah kurang dari 13.<br>
+c. Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[user]/modul1.
+</p></li>
 </ol>

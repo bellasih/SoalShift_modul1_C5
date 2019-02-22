@@ -29,11 +29,11 @@ d. Password yang dihasilkan tidak boleh sama.
 <p>Untuk menyelesaikan soal nomor 4, berikut adalah langkah-langkahnya :
 <ol><li>Buatlah shell script yang dapat melakukan enkripsi pada file syslog yang terletak pada <i>/var/log/syslog/</i><br>
         Berikut adalah langkah-langkah dalam membuat file berekstensi .sh untuk melakukan enkripsi:<br>
-        <ul><li>Simpan jam yang didapat dari tanggal ke dalam sebuah variabel untuk keperluan enkripsi. Variabel ini nantinya sebagai           titik pergeseran huruf.</li>
-<li>Simpan waktu dan tanggal dalam sebuah variabel yang nantinya akan dipakai untuk penamaan file output setelah enkripsi.</li>
+        <ul><li>Simpan jam yang didapat dari tanggal ke dalam sebuah variabel untuk keperluan enkripsi. Variabel ini nantinya sebagai           titik pergeseran huruf. Contoh sintaksnya: <code>`hr=date +"%H"`</code></li>
+<li>Simpan waktu dan tanggal dalam sebuah variabel yang nantinya akan dipakai untuk penamaan file output setelah enkripsi.Contoh sintaksnya: <code>filename=`date +"%H:%M %d-%m%y"`</code></li>
 <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan enkripsi dimana pergeseran hanya dimungkinkan sekali. </li>
-<li>Terjemahkan hasil dari cat pada var/log/syslog dari sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad</li>
-<li>Simpan hasil enkripsi ke dalam sebuah file dengan format nama waktu dan tanggal</li></ul>
+                <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog dari sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
+<li>Simpan hasil enkripsi ke dalam sebuah file sesuai format waktu dan tanggal</li></ul>
     <li>2. </li>
 </ol></p>
 </li>

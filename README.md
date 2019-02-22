@@ -20,7 +20,7 @@ do
   let i++
 done
         </pre>
-        <h5>Penjelasan<h5></br>
+        <h5>Penjelasan<h5><br>
                <p>1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop<br>
   2. <code>base64 -d</code> Mendecrypt semua "pict" yang sudah ditentukan di for loop tadi.<br>
   3. Hasil decrypt nya masuk ke perintah <code>xxd -r</code> untuk di reverse hexdump<br>

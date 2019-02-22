@@ -11,7 +11,7 @@
 <h5>Jawaban</h5>
 <p></p>
 <p>Untuk menyelesaikan soal nomor 4, berikut adalah langkah-langkahnya :
-<ol><li>Buatlah shell scripting untuk melakukan enkripsi pada file syslog yang terletak pada /var/log/syslog/</li>
+<ol><li>Buatlah shell scripting untuk melakukan enkripsi pada file syslog yang terletak pada <i>/var/log/syslog/</i></li>
     <li>2. </li>
 </ol></p>
 </li></ol>

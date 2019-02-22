@@ -35,7 +35,7 @@ d. Password yang dihasilkan tidak boleh sama.
                 <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog dari sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
 <li>Simpan hasil enkripsi ke dalam sebuah file sesuai format waktu dan tanggal</li></ul>
         Berikut adalah contoh source code enkripsi <br>
-        <code>
+        <pre>
 #!/bin/bash
 hr=`date +"%H"`
 filename=`date +"%H:%M %d-%m-%y"`
@@ -46,7 +46,7 @@ lc+=$lc
 uc+=$uc
 
 cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" > "$filename"
-</code>
+</pre>
     <li>2. </li>
 </ol></p>
 </li>

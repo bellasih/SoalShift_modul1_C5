@@ -7,7 +7,7 @@
 <ol>
         <li><p align="justify">Anda diminta tolong oleh teman anda untuk mengembalikan filenya yang telah dienkripsi oleh seseorang menggunakan bash script, file yang dimaksud adalah nature.zip. Karena terlalu mudah kalian memberikan syarat akan membuka seluruh file tersebut jika pukul 14:14 pada tanggal 14 Februari atau hari tersebut adalah hari jumat pada bulan Februari.<br>
                 <b>Hint: Base64, Hexdump</b></br>
-        <h5>Jawaban</h5></br>
+        <h5>Jawaban</h5>
         <p>Langkah-langkah:</p>
         <ol><li>Download file nature.zip, ekstrak di home</li>
         <li>Buat file berekstensi .sh dengan sintaks sebagai berikut : </li>
@@ -21,7 +21,7 @@ do
 done
         </pre>
         <h5>Penjelasan<h5><br>
-         <p>1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop<br>
+        <p>1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop<br>
   2. <code>base64 -d</code> Mendecrypt semua "pict" yang sudah ditentukan di for loop tadi.<br>
   3. Hasil decrypt nya masuk ke perintah <code>xxd -r</code> untuk di reverse hexdump<br>
   4. <code>"/home/nanda/nature/photo"$i".jpg"</code> Hasil jadinya disimpan di folder nature dengan mengganti nama menjadi "pict<i>n</i>.jpg" n=1,2,3,..  </p></ol>

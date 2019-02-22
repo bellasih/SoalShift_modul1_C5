@@ -24,7 +24,10 @@ done
         <p>1. <code>for pict in /home/nanda/nature/*.jpg</code> Semua gambar di folder nature akan masuk ke dalam for loop<br>
   2. <code>base64 -d</code> Mendecrypt semua "pict" yang sudah ditentukan di for loop tadi.<br>
   3. Hasil decrypt nya masuk ke perintah <code>xxd -r</code> untuk di reverse hexdump<br>
-  4. <code>"/home/nanda/nature/photo"$i".jpg"</code> Hasil jadinya disimpan di folder nature dengan mengganti nama menjadi "pict<i>n</i>.jpg" n=1,2,3,..  </p></ol>
+  4. <code>"/home/nanda/nature/photo"$i".jpg"</code> Hasil jadinya disimpan di folder nature dengan mengganti nama menjadi "pict<i>n</i>.jpg" n=1,2,3,..  </p>
+                <li>Untuk crontab, ketik `crontab -e`  
+                </code>14 14 14 2 5 /bin/bash /home/nanda/nature/soal1.sh </code> ketikkan pada baris terakhir crontab. Lalu ketikkan <code>crontab -l</code> untuk memastikan perubahan yang disimpan
+  </br></br></br></li></ol>
         </p></li>
         <li><p align="justify">Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv. Laporan yang diminta berupa:<br>
 a. Tentukan negara dengan penjualan(quantity) terbanyak pada tahun 2012.<br>

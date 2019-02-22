@@ -34,7 +34,7 @@ d. Password yang dihasilkan tidak boleh sama.
 <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan enkripsi dimana pergeseran hanya dimungkinkan sekali. </li>
                 <li>Terjemahkan hasil dari <code>cat</code> pada var/log/syslog sesuai dengan format konversi enkripsi yaitu menggeser huruf yang sebenarnya menjadi huruf ke-n dari abjad. </li>
 <li>Simpan hasil enkripsi ke dalam sebuah file sesuai format waktu dan tanggal</li></ul>
-        <br>Berikut adalah contoh source code enkripsi <br>
+        <br>Berikut adalah contoh source code enkripsi: <br>
         <pre>
 #!/bin/bash
 hr=`date +"%H"`
@@ -52,8 +52,8 @@ cat /var/log/syslog | tr "${lc:0:26}${uc:0:26}" "${lc:$hour:26}${uc:$hour:26}" >
         <li>Simpan jam yang di dapat dari waktu ke dalam sebuah variabel. Variabel ini akan digunakan sebagai titik pergeseran huruf untuk melakukan dekripsi</li>
         <li>Deklarasikan sebuah variabel bertipe string yang berisi huruf, mulai dari a-z dan A-Z. Nilai string tersebut akan berulang kembali ke huruf awal  [a|A] setelah sampai pada abjad terakhir [z|Z]. Hal ini untuk memenuhi kebutuhan dekripsi dimana pergeseran hanya dimungkinkan sekali.</li>
        <li>Terjemahkan hasil dari <code>cat</code> pada file yang dipilih sesuai dengan format konversi dekripsi yaitu menggeser huruf huruf ke-n dari abjad agar di dapat huruf yang sesuai dengan urutan yang sebenarnya. </li>
-<br>Berikut adalah contoh source code enkripsi <br>
- <pre>
+                <p>Berikut adalah contoh source code dekripsi: </p>
+<pre>
 #!/bin/bash
 echo "Masukkan nama file yang akan didecrypt: "
 read date_time
@@ -70,10 +70,11 @@ cat "$date_time" | tr "${lc:$hr:26}${uc:$hr:26}" "${lc:0:26}${uc:0:26}" | cat > 
 </li>
 </ol></p>
 </li>
+
 <li><p align="justify">Buatlah sebuah script bash untuk menyimpan record dalam syslog yang memenuhi kriteria berikut:<br>
 a. Tidak mengandung string “sudo”, tetapi mengandung string “cron”, serta buatlah pencarian stringnya tidak bersifat case sensitive,
 sehingga huruf kapital atau tidak, tidak menjadi masalah.<br>
 b. Jumlah field (number of field) pada baris tersebut berjumlah kurang dari 13.<br>
 c. Masukkan record tadi ke dalam file logs yang berada pada direktori /home/[user]/modul1.
-</p></li>
+</p><h5>Jawaban</h5></li>
 </ol>

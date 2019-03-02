@@ -177,7 +177,7 @@ awk '/cron/ || /CRON/,!/sudo/' /var/log/syslog | awk 'NF < 13' >> /home/bella/mo
         <li>!/sudo/ : menyeleksi baris yang akan diambil dimana baris tersebut tidak mengandung kata sudo</li>
         <li>/var/log/syslog :file syslog yang akan diambil barisnya untuk diseleski</li>
         <li>NF < 13 : mengambil jumlah kolom yang kurang dari 13 (menjadi input) </li>
-        <li>/home/bella/soalshift1/hasil5.log : tempat file output akan diletakkan</li>
+        <li>/home/bella/modul1/hasil5.log : tempat file output akan diletakkan</li>
 </ul>
 <h6>Crontab</h6>
 <pre>
